@@ -1,4 +1,4 @@
-# Mudae AutoRoll AutoClaim AutoReact 2025
+# Mudae AutoRoll AutoClaim AutoReact 2024
 ### by GDiazFentanes
 
 ## Introduction
@@ -31,7 +31,7 @@ pip install schedule
 ```
 
 ## How to set up /use
-##### Pakages
+##### Packages
 To use this bot you just need to set up a few things. Make sure python 3 is installed along with the 2 required libraries (Discum and Schedule).
 If you don't know how to do it, read here → [How to install a Python package](https://packaging.python.org/en/latest/tutorials/installing-packages/)
 
@@ -47,10 +47,15 @@ You also choose what Discord account you want to execute the code in and on what
 **Optional variables** : They are already filled by default, but you can change them if you want (specialy the desiredSeries one)
 
 + `rollCommand` - Choose what command (only one) will the bot use to roll (mx, ma, mg, wx, wg, wa, hx, ha or hg)
-+ `desiredKakeras` - **Case-sensitive** - Array of kakera types between single quotes separated by comas (see example below)
-+ `desiredSeries` - **Case-sensitive** - Array of series between single quotes separated by comas (see example below)
-+ `pokeRoll` - If you want to also roll the Mudae´s Pokeslot (True or False)
++ `soulmateKakeras` - **Case-sensitive** - Kakera reacts you only want to happen on soulmates (half react cost)
++ `anycardKakeras` - **Case-sensitive** - Array of kakera types between single quotes separated by comas (see example below)
++ `desiredSeries` - **Case-sensitive** - Array of series between single quotes separated by commas (see example below)
++ `desiredCharacters` - **Case-sensitive** - Array of character names between single quotes separated by commas (see example below)
 + `repeatMinute` - You can choose what exact minute of the hour will the Bot roll (value between 00 and 59, will be set to 25 by default)
++ `Extras` - Bot will use commands like '$rt', '$p', '$dk', '$daily', automatically. See line 23 of Function.py for more info.
++ `reRoll` - Automatically uses '$rolls' command at the end of a rolling session and starts over. 
++ `claimAnyone` - Set this to true if you just want to grow your collection, and claim whoever is available that is above the value of minimumClaimValue. Otherwise, only characters in desiredSeries and desiredCharacters will be autoclaimed. 
++ `minimumClaimValue` - Use this to set a minimum value for whoever gets autoclaimed. Note that this value will be overriden if a character is in desiredSeries or desiredCharacters list.
 
 ##### Example of correctly filled variables
 Depending on the variable type (boolean, string, int or array), the data might be between quotes or not. Please pay attention to it.
@@ -79,20 +84,4 @@ This will open the file and start the Bot, logging all the rolls and actions mad
 - Your Mudae settings always have a button on each character roll
 - Series and Characters are case-sensitive
 - Your account must have a DM (at any time) with the mudae bot (try $help to make sure)
-
-## Advanced Bot
-
-An advanced Bot comes with advanced features!! Let me know if you want me to post it!
-These are the advanced Bot features:
-
-- **ALL** the previous features
-- **Desired Characters**: AutoClaim the exact characters when they appear with priority over all!
-- **Optimized Kakera react**: The bot will use an algorithm to prioritize higher Kakera values without losing any efficiency
-- **Optimized claiming**: In order to not losing the claim, it will get the max value card in case it doesn't match any desired series or cards
-- **Optimized $dk use**: The bot will perfectly use and take into account the DK command to get even more effective kakera reactions
-- **Optimized $rt use**: In case of not having an available claim, the Bot will use the $rt command to be able to claim
-- **Optimized $daily use**: Use the daily command each time it is available
-- **Optimized $rolls use**: Use the rolls command to get better claims or kakera reactions
-- **Multi-Bot**: Add as many Discord Accounts as you want to do everything menctioned above to multiply your profits
-
-
+- Sometimes wished characters aren't claimed if they have the special wish dialogue. To prevent this, set `$wishdm # y #` (first and third settings are up to you)
