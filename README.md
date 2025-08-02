@@ -1,5 +1,5 @@
 # Mudae AutoRoll AutoClaim AutoReact 2024
-### by GDiazFentanes
+### by GDiazFentanes (with edits by colmisch123)
 
 ## Introduction
 Auto Rolling, Auto Claiming and Auto Reacting, in order to claim mudae's waifus, kakeras or husbandos every hour automatically. Slash rolling with given parameters for a better botting experience.
